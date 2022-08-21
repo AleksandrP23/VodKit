@@ -248,13 +248,13 @@ if (document.querySelector('.cart')) {
     });
     let placemark = new ymaps.Placemark(center, {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/mark.png',
+      iconImageHref: './img/mark.png',
       iconImageSize: [84, 130],
       iconImageOffset: [-50, -105]
     });
     let placemark1 = new ymaps.Placemark([56.34038680896262, 43.81515822046672], {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/mark-white.png',
+      iconImageHref: './img/mark-white.png',
       iconImageSize: [84, 130],
       iconImageOffset: [-50, -105]
     });
