@@ -19,6 +19,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_more__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_more__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_stepper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/stepper */ "./src/js/components/stepper.js");
 /* harmony import */ var _components_stepper__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_stepper__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_btn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/btn */ "./src/js/components/btn.js");
+/* harmony import */ var _components_btn__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_btn__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_7__);
+
+
 
 
 
@@ -139,6 +145,64 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/btn.js":
+/*!**********************************!*\
+  !*** ./src/js/components/btn.js ***!
+  \**********************************/
+/***/ (() => {
+
+if (document.querySelector('.order-radio__wrapper')) {
+  document.getElementById('self-btn').onclick = function () {
+    var disabled = document.getElementById("name").disabled;
+    var disabled1 = document.getElementById("name1").disabled;
+    var disabled2 = document.getElementById("name2").disabled;
+    var disabled3 = document.getElementById("name3").disabled;
+    var disabled4 = document.getElementById("name4").disabled;
+
+    if (disabled) {
+      document.getElementById("name").disabled = false;
+    } else {
+      document.getElementById("name").disabled = true;
+    }
+
+    ;
+
+    if (disabled1) {
+      document.getElementById("name1").disabled = false;
+    } else {
+      document.getElementById("name1").disabled = true;
+    }
+
+    ;
+
+    if (disabled2) {
+      document.getElementById("name2").disabled = false;
+    } else {
+      document.getElementById("name2").disabled = true;
+    }
+
+    ;
+
+    if (disabled3) {
+      document.getElementById("name3").disabled = false;
+    } else {
+      document.getElementById("name3").disabled = true;
+    }
+
+    ;
+
+    if (disabled4) {
+      document.getElementById("name4").disabled = false;
+    } else {
+      document.getElementById("name4").disabled = true;
+    }
+
+    ;
+  };
+}
+
+/***/ }),
+
 /***/ "./src/js/components/fixHeader.js":
 /*!****************************************!*\
   !*** ./src/js/components/fixHeader.js ***!
@@ -164,6 +228,56 @@ if (document.querySelector('.hero-height')) {
       header.classList.remove('header--opacity');
     }
   });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/map.js":
+/*!**********************************!*\
+  !*** ./src/js/components/map.js ***!
+  \**********************************/
+/***/ (() => {
+
+if (document.querySelector('.cart')) {
+  let center = [56.34100750797671, 43.81700269503323];
+
+  function init() {
+    let map = new ymaps.Map('map', {
+      center: center,
+      zoom: 18
+    });
+    let placemark = new ymaps.Placemark(center, {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../../img/mark.png',
+      iconImageSize: [84, 130],
+      iconImageOffset: [-50, -105]
+    });
+    let placemark1 = new ymaps.Placemark([56.34038680896262, 43.81515822046672], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../../img/mark-white.png',
+      iconImageSize: [84, 130],
+      iconImageOffset: [-50, -105]
+    });
+    map.controls.remove('geolocationControl'); // удаляем геолокацию
+
+    map.controls.remove('searchControl'); // удаляем поиск
+
+    map.controls.remove('trafficControl'); // удаляем контроль трафика
+
+    map.controls.remove('typeSelector'); // удаляем тип
+
+    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+
+    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+
+    map.controls.remove('rulerControl'); // удаляем контрол правил
+    // map.geoObjects.add(placemark);
+
+    map.geoObjects.add(placemark);
+    map.geoObjects.add(placemark1);
+  }
+
+  ymaps.ready(init);
 }
 
 /***/ }),
@@ -216,11 +330,14 @@ __webpack_require__.r(__webpack_exports__);
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
 const bestsSlider = document.querySelector('.best-slider');
+const oftensSlider = document.querySelector('.often-slider');
 const productsSlider = document.querySelector('.products-slider');
 const contextsSlider = document.querySelector('.context-slider');
 const lkOrdersSlider = document.querySelector('.order-slider');
 const addressesSlider = document.querySelector('.address-slider');
 const buysSlider = document.querySelector('.buy-slider');
+const cardsSlider = document.querySelector('.product-card__slider');
+const selfsSlider = document.querySelector('.self-slider');
 
 if (bestsSlider) {
   const bestSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](bestsSlider, {
@@ -254,6 +371,40 @@ if (bestsSlider) {
       1921: {
         slidesPerView: 4,
         spaceBetween: 40
+      }
+    }
+  });
+}
+
+;
+
+if (oftensSlider) {
+  const oftenSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](oftensSlider, {
+    slidesPerView: 4,
+    spaceBetween: 70,
+    navigation: {
+      nextEl: '.best-slider__next',
+      prevEl: '.best-slider__prev'
+    },
+    pagination: {
+      el: '.best-slider__pag',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      630: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      1366: {
+        slidesPerView: 4,
+        spaceBetween: 70
       }
     }
   });
@@ -456,6 +607,62 @@ if (addressesSlider) {
 
 ;
 
+if (cardsSlider) {
+  document.addEventListener('DOMContentLoaded', () => {
+    let mySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.slider-block', {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      pagination: {
+        el: ".swiper-pagination"
+      }
+    });
+    const maxItems = 3;
+    const sliderNavItems = document.querySelectorAll('.slider-nav__item');
+    const sliderNav = document.querySelector('.slider-nav');
+    sliderNavItems.forEach((el, index) => {
+      el.setAttribute('data-index', index);
+      el.addEventListener('click', e => {
+        const index = parseInt(e.currentTarget.dataset.index);
+        mySwiper.slideTo(index);
+      });
+    });
+  });
+}
+
+if (selfsSlider) {
+  const selfSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](selfsSlider, {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    navigation: {
+      nextEl: '.best-slider__next',
+      prevEl: '.best-slider__prev'
+    },
+    pagination: {
+      el: '.best-slider__pag',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      630: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      1366: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    }
+  });
+}
+
+;
+
 /***/ }),
 
 /***/ "./src/js/components/stepper.js":
@@ -464,103 +671,105 @@ if (addressesSlider) {
   \**************************************/
 /***/ (() => {
 
-const stepper = document.querySelector('.stepper');
-const stepperInput = stepper.querySelector('.stepper__input');
-const stepperBtnUp = stepper.querySelector('.stepper__btn--up');
-const stepperBtnDown = stepper.querySelector('.stepper__btn--down');
-let count = stepperInput.value;
+if (document.querySelector('.stepper')) {
+  const stepper = document.querySelector('.stepper');
+  const stepperInput = stepper.querySelector('.stepper__input');
+  const stepperBtnUp = stepper.querySelector('.stepper__btn--up');
+  const stepperBtnDown = stepper.querySelector('.stepper__btn--down');
+  let count = stepperInput.value;
 
-const isNotApple = () => {
-  if (!/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    return false;
+  const isNotApple = () => {
+    if (!/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      return false;
+    }
+
+    return true;
+  };
+
+  function allowNumbersOnly(e) {
+    var code = e.which ? e.which : e.keyCode;
+
+    if (code > 31 && (code < 48 || code > 57)) {
+      e.preventDefault();
+    }
   }
 
-  return true;
-};
+  stepperInput.addEventListener('keyup', e => {
+    let self = e.currentTarget;
 
-function allowNumbersOnly(e) {
-  var code = e.which ? e.which : e.keyCode;
+    if (self.value == '0') {
+      self.value = 1;
+    }
 
-  if (code > 31 && (code < 48 || code > 57)) {
+    if (isNotApple) {
+      self.style.width = "".concat(self.value.length + 1, "ex");
+    } else {
+      self.style.width = "".concat(self.value.length + 2, "ex");
+    }
+
+    count = stepperInput.value;
+
+    if (count == 1) {
+      stepperBtnDown.classList.add('stepper__btn--disabled');
+    } else {
+      stepperBtnDown.classList.remove('stepper__btn--disabled');
+    }
+  });
+  stepperInput.addEventListener('keypress', e => {
+    allowNumbersOnly(e);
+  });
+  stepperInput.addEventListener('change', e => {
+    let self = e.currentTarget;
+
+    if (!self.value) {
+      self.value = 1;
+    }
+
+    count = stepperInput.value;
+
+    if (count == 1) {
+      stepperBtnDown.classList.add('stepper__btn--disabled');
+    } else {
+      stepperBtnDown.classList.remove('stepper__btn--disabled');
+    }
+  });
+  stepperBtnUp.addEventListener('click', e => {
     e.preventDefault();
-  }
+    count++;
+
+    if (count == 1) {
+      stepperBtnDown.classList.add('stepper__btn--disabled');
+    } else {
+      stepperBtnDown.classList.remove('stepper__btn--disabled');
+    }
+
+    stepperInput.value = count;
+
+    if (isNotApple) {
+      stepperInput.style.width = "".concat(stepperInput.value.length + 1, "ex");
+    } else {
+      stepperInput.style.width = "".concat(stepperInput.value.length + 2, "ex");
+    }
+  });
+  stepperBtnDown.addEventListener('click', e => {
+    e.preventDefault();
+    count--;
+
+    if (count == 1) {
+      stepperBtnDown.classList.add('stepper__btn--disabled');
+    } else {
+      stepperBtnDown.classList.remove('stepper__btn--disabled');
+    }
+
+    stepperInput.value = count;
+
+    if (isNotApple) {
+      stepperInput.style.width = "".concat(stepperInput.value.length + 1, "ex");
+    } else {
+      stepperInput.style.width = "".concat(stepperInput.value.length + 2, "ex");
+    }
+  });
 }
-
-stepperInput.addEventListener('keyup', e => {
-  let self = e.currentTarget;
-
-  if (self.value == '0') {
-    self.value = 1;
-  }
-
-  if (isNotApple) {
-    self.style.width = "".concat(self.value.length + 1, "ex");
-  } else {
-    self.style.width = "".concat(self.value.length + 2, "ex");
-  }
-
-  count = stepperInput.value;
-
-  if (count == 1) {
-    stepperBtnDown.classList.add('stepper__btn--disabled');
-  } else {
-    stepperBtnDown.classList.remove('stepper__btn--disabled');
-  }
-});
-stepperInput.addEventListener('keypress', e => {
-  allowNumbersOnly(e);
-});
-stepperInput.addEventListener('change', e => {
-  let self = e.currentTarget;
-
-  if (!self.value) {
-    self.value = 1;
-  }
-
-  count = stepperInput.value;
-
-  if (count == 1) {
-    stepperBtnDown.classList.add('stepper__btn--disabled');
-  } else {
-    stepperBtnDown.classList.remove('stepper__btn--disabled');
-  }
-});
-stepperBtnUp.addEventListener('click', e => {
-  e.preventDefault();
-  count++;
-
-  if (count == 1) {
-    stepperBtnDown.classList.add('stepper__btn--disabled');
-  } else {
-    stepperBtnDown.classList.remove('stepper__btn--disabled');
-  }
-
-  stepperInput.value = count;
-
-  if (isNotApple) {
-    stepperInput.style.width = "".concat(stepperInput.value.length + 1, "ex");
-  } else {
-    stepperInput.style.width = "".concat(stepperInput.value.length + 2, "ex");
-  }
-});
-stepperBtnDown.addEventListener('click', e => {
-  e.preventDefault();
-  count--;
-
-  if (count == 1) {
-    stepperBtnDown.classList.add('stepper__btn--disabled');
-  } else {
-    stepperBtnDown.classList.remove('stepper__btn--disabled');
-  }
-
-  stepperInput.value = count;
-
-  if (isNotApple) {
-    stepperInput.style.width = "".concat(stepperInput.value.length + 1, "ex");
-  } else {
-    stepperInput.style.width = "".concat(stepperInput.value.length + 2, "ex");
-  }
-});
 
 /***/ }),
 
@@ -581,6 +790,10 @@ if (document.querySelector('.info')) {
 
 if (document.querySelector('.lk')) {
   const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('lk');
+}
+
+if (document.querySelector('.order-tabs')) {
+  const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('order-tabs');
 }
 
 /***/ }),
