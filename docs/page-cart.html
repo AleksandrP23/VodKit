@@ -23,40 +23,143 @@
   <div class="site-container">
     <header class="header header-main">
   <div class="container header__container">
-    <a href="#" class="header__logo">
+    <a href="index.html" class="header__logo">
       <svg class="header__logo-img">
         <use xlink:href="img/sprite.svg#vodkit-logo"></use>
       </svg>
       <span class="header__logo-text">Оптовый склад комплектующих для водоподготовки</span>
     </a>
     <div class="header-items">
-      <a href="#" class="header-items__link header-items__link--search">
-        <svg class="header-items__img">
-          <use xlink:href="img/sprite.svg#search"></use>
-        </svg>
-        Поиск</a>
-      <a href="#" class="header-items__link">
+      <div id="wrap">
+        <form action="" autocomplete="on">
+          <input id="search" name="search" type="text">
+          <input id="search_submit" type="submit">
+          <a href="#" class="header-items__link header-items__link--search">
+            <svg class="header-items__img">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+            Поиск
+          </a>
+        </form>
+      </div>
+      <a href="page-card.html" class="header-items__link">
         <svg class="header-items__img">
           <use xlink:href="img/sprite.svg#price"></use>
         </svg>
         Прайс</a>
-      <a href="#" class="header-items__link">
+      <a href="page-lk.html" class="header-items__link">
         <svg class="header-items__img">
           <use xlink:href="img/sprite.svg#login"></use>
         </svg>
         Войти</a>
-      <a href="#" class="header-items__link">
+      <a href="page-cart.html" class="header-items__link">
         <svg class="header-items__img">
           <use xlink:href="img/sprite.svg#cart"></use>
         </svg>
         Корзина
         <span class="header-items__count">1</span>
       </a>
-      <a href="#" class="header-items__link header-items__link--catalog">
-        <svg class="header-items__img">
-          <use xlink:href="img/sprite.svg#catalog"></use>
-        </svg>
-        Каталог</a>
+      <ul class="menu list-reset">
+        <li class="menu__item">
+          <button class="btn-reset menu__btn header-items__link header-items__link--catalog">
+            <svg class="header-items__img">
+              <use xlink:href="img/sprite.svg#catalog"></use>
+            </svg>
+            Каталог</button>
+          <div class="dropdown">
+            <ul class="dropdown__list list-reset accordion__list">
+              <button id="btn1" class="btn-reset dropdown__svg">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+              </button>
+              <li class="dropdown__link">
+                <ul class="list-reset dropdown__btn dropdown__link-list">
+                  <li class="dropdown__link-list__item">
+                    <a href="#" class="dropdown__link-list__link">Фильтры засыпные</a>
+                  </li>
+                  <li class="dropdown__link-list__item">
+                    <a href="#" class="dropdown__link-list__link">Колонны аэрации</a>
+                  </li>
+                  <li class="dropdown__link-list__item">
+                    <a href="#" class="dropdown__link-list__link">Подбор оборудования по анализу воды</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion">
+                <button class="btn-reset accordion__control" aria-expanded="false">
+                  <span class="accordion__title">Для засыпных фильтров</span>
+                  <span class="accordion__icon"></span>
+                </button>
+                <div class="accordion__content" aria-hidden="true">
+                  <ul class="list-reset dropdown__link-list">
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Блоки управления
+                        Runxin</a>
+                    </li>
+                    <li class="dropdown__link-list__item"><a href="#"
+                        class="dropdown__link-list__link">Дистрибьюторы</a></li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Адаптеры,
+                        оголовки, трубы</a></li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Баки солевые</a>
+                    </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Загрузки,
+                        реагенты</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accordion">
+                <button class="btn-reset accordion__control" aria-expanded="false">
+                  <span class="accordion__title">Комплектующие для установок водоподготовки</span>
+                  <span class="accordion__icon"></span>
+                </button>
+                <div class="accordion__content" aria-hidden="true">
+                  <ul class="list-reset dropdown__link-list">
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">УФ
+                        Стерилизаторы</a> </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Фильтры
+                        мешочные</a> </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Фильтры
+                        дисковые</a> </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Фильтры
+                        мультипатронные</a> </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Клапаны
+                        электромагнитные</a> </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Гидроциклоны</a>
+                    </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Клапаны
+                        воздушные</a> </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Насосы</a> </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Компрессоры</a>
+                    </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Ротаметры</a>
+                    </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Выключатель
+                        поплавковый</a> </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Контроллеры</a>
+                    </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Манометры</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accordion">
+                <button class="btn-reset accordion__control" aria-expanded="false">
+                  <span class="accordion__title">Для мембранных установок</span>
+                  <span class="accordion__icon"></span>
+                </button>
+                <div class="accordion__content" aria-hidden="true">
+                  <ul class="list-reset dropdown__link-list">
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Мембраны
+                        обратноосмотические</a> </li>
+                    <li class="dropdown__link-list__item"><a href="#" class="dropdown__link-list__link">Корпуса
+                        мембранные</a> </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </header>
@@ -85,7 +188,42 @@
           </div>
           <div class="cart__item-tdescr">
             <div class="cart__item-quantity">
-              <div class="stepper cart__item-stepper">
+              <div id="steppers" class="stepper cart__item-stepper">
+                <button class="stepper__btn stepper__btn--down" aria-label="Уменьшить количество">-</button>
+                <label class="stepper__field">
+                  <input type="text" value="1" maxlength="3" class="stepper__input">
+                </label>
+                <button class="stepper__btn stepper__btn--up" aria-label="Увеличить количество">+</button>
+              </div>
+              <span class="cart__item-stepper-quan">20 000 ₽/шт</span>
+            </div>
+            <div class="cart__item-total">
+              <span class="cart__item-sale">35 000 ₽</span>
+              <p class="cart__item-sum">20 000 ₽</p>
+              <span class="cart__item-cashback">Кэшбек 1000 руб</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="cart__item">
+        <picture class="cart__item-pic">
+          <source srcset="./img/card-1.avif" type="image/avif">
+          <source srcset="./img/card-1.webp" type="image/webp">
+          <img loading="lazy" src="./img/card-1.png" class="cart__image" width="209px" height="144px" alt="Картинка">
+        </picture>
+        <div class="cart__item-wrap">
+          <div class="cart__item-descr">
+            <h3 class="cart__item-title">Готовые комплекты (системы) для очистки воды для дома и коттеджа. Комплект № 1
+            </h3>
+            <button class="btn-reset cart__item-btn">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#delete"></use>
+              </svg>
+              Удалить</button>
+          </div>
+          <div class="cart__item-tdescr">
+            <div class="cart__item-quantity">
+              <div id="steppers" class="stepper cart__item-stepper">
                 <button class="stepper__btn stepper__btn--down stepper__btn--disabled"
                   aria-label="Уменьшить количество">-</button>
                 <label class="stepper__field">
@@ -121,7 +259,42 @@
           </div>
           <div class="cart__item-tdescr">
             <div class="cart__item-quantity">
-              <div class="stepper cart__item-stepper">
+              <div id="steppers" class="stepper cart__item-stepper">
+                <button class="stepper__btn stepper__btn--down" aria-label="Уменьшить количество">-</button>
+                <label class="stepper__field">
+                  <input type="text" value="1" maxlength="3" class="stepper__input">
+                </label>
+                <button class="stepper__btn stepper__btn--up" aria-label="Увеличить количество">+</button>
+              </div>
+              <span class="cart__item-stepper-quan">20 000 ₽/шт</span>
+            </div>
+            <div class="cart__item-total">
+              <span class="cart__item-sale">35 000 ₽</span>
+              <p class="cart__item-sum">20 000 ₽</p>
+              <span class="cart__item-cashback">Кэшбек 1000 руб</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="cart__item">
+        <picture class="cart__item-pic">
+          <source srcset="./img/card-1.avif" type="image/avif">
+          <source srcset="./img/card-1.webp" type="image/webp">
+          <img loading="lazy" src="./img/card-1.png" class="cart__image" width="209px" height="144px" alt="Картинка">
+        </picture>
+        <div class="cart__item-wrap">
+          <div class="cart__item-descr">
+            <h3 class="cart__item-title">Готовые комплекты (системы) для очистки воды для дома и коттеджа. Комплект № 1
+            </h3>
+            <button class="btn-reset cart__item-btn">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#delete"></use>
+              </svg>
+              Удалить</button>
+          </div>
+          <div class="cart__item-tdescr">
+            <div class="cart__item-quantity">
+              <div id="steppers" class="stepper cart__item-stepper">
                 <button class="stepper__btn stepper__btn--down stepper__btn--disabled"
                   aria-label="Уменьшить количество">-</button>
                 <label class="stepper__field">
@@ -157,9 +330,8 @@
           </div>
           <div class="cart__item-tdescr">
             <div class="cart__item-quantity">
-              <div class="stepper cart__item-stepper">
-                <button class="stepper__btn stepper__btn--down stepper__btn--disabled"
-                  aria-label="Уменьшить количество">-</button>
+              <div id="steppers" class="stepper cart__item-stepper">
+                <button class="stepper__btn stepper__btn--down" aria-label="Уменьшить количество">-</button>
                 <label class="stepper__field">
                   <input type="text" value="1" maxlength="3" class="stepper__input">
                 </label>
@@ -193,79 +365,7 @@
           </div>
           <div class="cart__item-tdescr">
             <div class="cart__item-quantity">
-              <div class="stepper cart__item-stepper">
-                <button class="stepper__btn stepper__btn--down stepper__btn--disabled"
-                  aria-label="Уменьшить количество">-</button>
-                <label class="stepper__field">
-                  <input type="text" value="1" maxlength="3" class="stepper__input">
-                </label>
-                <button class="stepper__btn stepper__btn--up" aria-label="Увеличить количество">+</button>
-              </div>
-              <span class="cart__item-stepper-quan">20 000 ₽/шт</span>
-            </div>
-            <div class="cart__item-total">
-              <span class="cart__item-sale">35 000 ₽</span>
-              <p class="cart__item-sum">20 000 ₽</p>
-              <span class="cart__item-cashback">Кэшбек 1000 руб</span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="cart__item">
-        <picture class="cart__item-pic">
-          <source srcset="./img/card-1.avif" type="image/avif">
-          <source srcset="./img/card-1.webp" type="image/webp">
-          <img loading="lazy" src="./img/card-1.png" class="cart__image" width="209px" height="144px" alt="Картинка">
-        </picture>
-        <div class="cart__item-wrap">
-          <div class="cart__item-descr">
-            <h3 class="cart__item-title">Готовые комплекты (системы) для очистки воды для дома и коттеджа. Комплект № 1
-            </h3>
-            <button class="btn-reset cart__item-btn">
-              <svg class="">
-                <use xlink:href="img/sprite.svg#delete"></use>
-              </svg>
-              Удалить</button>
-          </div>
-          <div class="cart__item-tdescr">
-            <div class="cart__item-quantity">
-              <div class="stepper cart__item-stepper">
-                <button class="stepper__btn stepper__btn--down stepper__btn--disabled"
-                  aria-label="Уменьшить количество">-</button>
-                <label class="stepper__field">
-                  <input type="text" value="1" maxlength="3" class="stepper__input">
-                </label>
-                <button class="stepper__btn stepper__btn--up" aria-label="Увеличить количество">+</button>
-              </div>
-              <span class="cart__item-stepper-quan">20 000 ₽/шт</span>
-            </div>
-            <div class="cart__item-total">
-              <span class="cart__item-sale">35 000 ₽</span>
-              <p class="cart__item-sum">20 000 ₽</p>
-              <span class="cart__item-cashback">Кэшбек 1000 руб</span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="cart__item">
-        <picture class="cart__item-pic">
-          <source srcset="./img/card-1.avif" type="image/avif">
-          <source srcset="./img/card-1.webp" type="image/webp">
-          <img loading="lazy" src="./img/card-1.png" class="cart__image" width="209px" height="144px" alt="Картинка">
-        </picture>
-        <div class="cart__item-wrap">
-          <div class="cart__item-descr">
-            <h3 class="cart__item-title">Готовые комплекты (системы) для очистки воды для дома и коттеджа. Комплект № 1
-            </h3>
-            <button class="btn-reset cart__item-btn">
-              <svg class="">
-                <use xlink:href="img/sprite.svg#delete"></use>
-              </svg>
-              Удалить</button>
-          </div>
-          <div class="cart__item-tdescr">
-            <div class="cart__item-quantity">
-              <div class="stepper cart__item-stepper">
+              <div id="steppers" class="stepper cart__item-stepper">
                 <button class="stepper__btn stepper__btn--down stepper__btn--disabled"
                   aria-label="Уменьшить количество">-</button>
                 <label class="stepper__field">
@@ -291,155 +391,242 @@
         </div>
       </li>
     </ul>
-    <div class="order-tabs" data-tabs="order-tabs">
+    <div class="order-tabs">
       <form action="#" class="cart__form cart-form">
-        <div class="cart-form__top">
-          <h3 class="cart-form__title">Оформление заказа</h3>
-          <div class="cart-form__order-wrapp">
-            <div class="cart-form__order">
+        <div class="order-tabs__wrapper" data-tabs="order-tabs">
+          <div class="cart-form__top">
+            <h3 class="cart-form__title">Оформление заказа</h3>
+            <div class="cart-form__order-wrapp">
+              <div class="cart-form__order">
+                <label class="cart-form__label">
+                  <input type="text" name="Имя" class="input-reset cart-form__input" placeholder="Ваше имя">
+                </label>
+                <label class="cart-form__label">
+                  <input type="tel" name="Телефон" class="input-reset cart-form__input" placeholder="Ваш телефон">
+                </label>
+                <label class="cart-form__label">
+                  <input type="email" name="Почта" class="input-reset cart-form__input" placeholder="info@mail.ru">
+                </label>
+              </div>
+              <ul class="list-reset tabs__nav cart-form__tabs">
+                <li class="tabs__nav-item cart-form__tabs-item">
+                  <button class="btn-reset tabs__nav-btn cart-form__tabs-btn" type="button">Доставка</button>
+                </li>
+                <li class="tabs__nav-item cart-form__tabs-item" id="self-btn">
+                  <button class="btn-reset tabs__nav-btn cart-form__tabs-btn" type="button">Самовывоз</button>
+                </li>
+              </ul>
+              <div class="order-radio__wrapper" id="self-input">
+                <label class="order-radio">
+                  <input type="radio" name="order" class="visually-hidden" id="name4">
+                  <span class="order-radio__text">Курьерская служба</span>
+                </label>
+                <label class="order-radio">
+                  <input type="radio" name="order" class="visually-hidden" id="name3">
+                  <span class="order-radio__text">Курьерская служба</span>
+                </label>
+                <label class="order-radio">
+                  <input type="radio" name="order" class="visually-hidden" id="name2">
+                  <span class="order-radio__text">Курьерская служба</span>
+                </label>
+                <label class="order-radio">
+                  <input type="radio" name="order" class="visually-hidden" id="name1">
+                  <span class="order-radio__text">Курьерская служба</span>
+                </label>
+              </div>
               <label class="cart-form__label">
-                <input type="text" name="Имя" class="input-reset cart-form__input" placeholder="Ваше имя">
-              </label>
-              <label class="cart-form__label">
-                <input type="tel" name="Телефон" class="input-reset cart-form__input" placeholder="Ваш телефон">
-              </label>
-              <label class="cart-form__label">
-                <input type="email" name="Почта" class="input-reset cart-form__input" placeholder="info@mail.ru">
+                <input type="text" name="Адресс" class="input-reset cart-form__input" placeholder="Ваш адресс"
+                  id="name">
               </label>
             </div>
-            <ul class="list-reset tabs__nav cart-form__tabs">
-              <li class="tabs__nav-item cart-form__tabs-item">
-                <button class="btn-reset tabs__nav-btn cart-form__tabs-btn" type="button">Доставка</button>
-              </li>
-              <li class="tabs__nav-item cart-form__tabs-item" id="self-btn">
-                <button class="btn-reset tabs__nav-btn cart-form__tabs-btn" type="button">Самовывоз</button>
-              </li>
-            </ul>
-            <div class="order-radio__wrapper" id="self-input">
-              <label class="order-radio">
-                <input type="radio" name="order" class="visually-hidden" id="name4">
-                <span class="order-radio__text">Курьерская служба</span>
-              </label>
-              <label class="order-radio">
-                <input type="radio" name="order" class="visually-hidden" id="name3">
-                <span class="order-radio__text">Курьерская служба</span>
-              </label>
-              <label class="order-radio">
-                <input type="radio" name="order" class="visually-hidden" id="name2">
-                <span class="order-radio__text">Курьерская служба</span>
-              </label>
-              <label class="order-radio">
-                <input type="radio" name="order" class="visually-hidden" id="name1">
-                <span class="order-radio__text">Курьерская служба</span>
-              </label>
-            </div>
-            <label class="cart-form__label">
-              <input type="text" name="Адресс" class="input-reset cart-form__input" placeholder="Ваш адресс" id="name">
-            </label>
           </div>
-        </div>
-        <div class="tabs__content tabs-map">
-          <div class="tabs__panel"></div>
-          <div class="tabs__panel">
-            <div class="cart-form__item cart-form__item--payment cart-form__self">
-              <h3 class="cart-form__title">Выберите пункт выдачи</h3>
-              <div class="swiper self-slider">
-                <button class="btn-reset best-slider__btn best-slider__prev">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#slider-arr"></use>
-                  </svg>
-                </button>
-                <button class="btn-reset best-slider__btn best-slider__next">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#slider-arr"></use>
-                  </svg>
-                </button>
-                <div class="swiper-pagination best-slider__pag"></div>
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="card">
-                      <label class="order-radio payment__radio">
-                        <input type="radio" name="order-item" class="visually-hidden">
-                        <div class="payment-list__text">
-                          <address class="cart-form__item-text">Адрес:
-                            <span class="cart-form__item-quantity">г. Нижний Новгород,
-                              ул. Островского, 25а, офис 32</span>
-                          </address>
-                          <a href="tel:+78656576556" class="cart-form__item-text">Телефон:
-                            <span class="cart-form__item-quantity">+7 (865-65) 7-65-56</span>
-                          </a>
-                          <p class="cart-form__item-text">График работы: <span class="cart-form__item-quantity">пн-вс
-                              8:00–20:00</span></p>
-                        </div>
-                      </label>
+          <div class="tabs__content tabs-map">
+            <div class="tabs__panel"></div>
+            <div class="tabs__panel">
+              <div class="cart-form__item cart-form__item--payment cart-form__self">
+                <h3 class="cart-form__title">Выберите пункт выдачи</h3>
+                <div class="swiper self-slider">
+                  <button class="btn-reset best-slider__btn best-slider__prev">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#slider-arr"></use>
+                    </svg>
+                  </button>
+                  <button class="btn-reset best-slider__btn best-slider__next">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#slider-arr"></use>
+                    </svg>
+                  </button>
+                  <div class="swiper-pagination best-slider__pag"></div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <label class="order-radio payment__radio">
+                          <input type="radio" name="order-item" class="visually-hidden">
+                          <div class="payment-list__text">
+                            <address class="cart-form__item-text">Адрес:
+                              <span class="cart-form__item-quantity">г. Нижний Новгород,
+                                ул. Островского, 25а, офис 32</span>
+                            </address>
+                            <a href="tel:+78656576556" class="cart-form__item-text">Телефон:
+                              <span class="cart-form__item-quantity">+7 (865-65) 7-65-56</span>
+                            </a>
+                            <p class="cart-form__item-text">График работы: <span class="cart-form__item-quantity">пн-вс
+                                8:00–20:00</span></p>
+                          </div>
+                        </label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card">
-                      <label class="order-radio payment__radio">
-                        <input type="radio" name="order-item" class="visually-hidden">
-                        <div class="payment-list__text">
-                          <address class="cart-form__item-text">Адрес:
-                            <span class="cart-form__item-quantity">г. Нижний Новгород,
-                              ул. Островского, 25а, офис 32</span>
-                          </address>
-                          <a href="tel:+78656576556" class="cart-form__item-text">Телефон:
-                            <span class="cart-form__item-quantity">+7 (865-65) 7-65-56</span>
-                          </a>
-                          <p class="cart-form__item-text">График работы: <span class="cart-form__item-quantity">пн-вс
-                              8:00–20:00</span></p>
-                        </div>
-                      </label>
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <label class="order-radio payment__radio">
+                          <input type="radio" name="order-item" class="visually-hidden">
+                          <div class="payment-list__text">
+                            <address class="cart-form__item-text">Адрес:
+                              <span class="cart-form__item-quantity">г. Нижний Новгород,
+                                ул. Островского, 25а, офис 32</span>
+                            </address>
+                            <a href="tel:+78656576556" class="cart-form__item-text">Телефон:
+                              <span class="cart-form__item-quantity">+7 (865-65) 7-65-56</span>
+                            </a>
+                            <p class="cart-form__item-text">График работы: <span class="cart-form__item-quantity">пн-вс
+                                8:00–20:00</span></p>
+                          </div>
+                        </label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card">
-                      <label class="order-radio payment__radio">
-                        <input type="radio" name="order-item" class="visually-hidden">
-                        <div class="payment-list__text">
-                          <address class="cart-form__item-text">Адрес:
-                            <span class="cart-form__item-quantity">г. Нижний Новгород,
-                              ул. Островского, 25а, офис 32</span>
-                          </address>
-                          <a href="tel:+78656576556" class="cart-form__item-text">Телефон:
-                            <span class="cart-form__item-quantity">+7 (865-65) 7-65-56</span>
-                          </a>
-                          <p class="cart-form__item-text">График работы: <span class="cart-form__item-quantity">пн-вс
-                              8:00–20:00</span></p>
-                        </div>
-                      </label>
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <label class="order-radio payment__radio">
+                          <input type="radio" name="order-item" class="visually-hidden">
+                          <div class="payment-list__text">
+                            <address class="cart-form__item-text">Адрес:
+                              <span class="cart-form__item-quantity">г. Нижний Новгород,
+                                ул. Островского, 25а, офис 32</span>
+                            </address>
+                            <a href="tel:+78656576556" class="cart-form__item-text">Телефон:
+                              <span class="cart-form__item-quantity">+7 (865-65) 7-65-56</span>
+                            </a>
+                            <p class="cart-form__item-text">График работы: <span class="cart-form__item-quantity">пн-вс
+                                8:00–20:00</span></p>
+                          </div>
+                        </label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card">
-                      <label class="order-radio payment__radio">
-                        <input type="radio" name="order-item" class="visually-hidden">
-                        <div class="payment-list__text">
-                          <address class="cart-form__item-text">Адрес:
-                            <span class="cart-form__item-quantity">г. Нижний Новгород,
-                              ул. Островского, 25а, офис 32</span>
-                          </address>
-                          <a href="tel:+78656576556" class="cart-form__item-text">Телефон:
-                            <span class="cart-form__item-quantity">+7 (865-65) 7-65-56</span>
-                          </a>
-                          <p class="cart-form__item-text">График работы: <span class="cart-form__item-quantity">пн-вс
-                              8:00–20:00</span></p>
-                        </div>
-                      </label>
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <label class="order-radio payment__radio">
+                          <input type="radio" name="order-item" class="visually-hidden">
+                          <div class="payment-list__text">
+                            <address class="cart-form__item-text">Адрес:
+                              <span class="cart-form__item-quantity">г. Нижний Новгород,
+                                ул. Островского, 25а, офис 32</span>
+                            </address>
+                            <a href="tel:+78656576556" class="cart-form__item-text">Телефон:
+                              <span class="cart-form__item-quantity">+7 (865-65) 7-65-56</span>
+                            </a>
+                            <p class="cart-form__item-text">График работы: <span class="cart-form__item-quantity">пн-вс
+                                8:00–20:00</span></p>
+                          </div>
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <section class="map">
+                <div id="map" style="width: 1920px; height: 634px"></div>
+              </section>
             </div>
-            <section class="map">
-              <div id="map" style="width: 1920px; height: 634px"></div>
-            </section>
           </div>
         </div>
         <div class="cart-form__bottom">
           <div class="cart-form__item cart-form__item--payment">
             <h3 class="cart-form__title">Выберите способ оплаты</h3>
-            <div class="cart-form__payment">
+            <div class="tabs" data-tabs="payment">
+              <ul class="list-reset tabs__nav payment-btns">
+                <li class="tabs__nav-item payment-item"><button class="btn-reset tabs__nav-btn payment-btn"
+                    type="button">Физическое лицо</button></li>
+                <li class="tabs__nav-item payment-item"><button class="btn-reset tabs__nav-btn payment-btn"
+                    type="button">Юридическое лицо</button></li>
+              </ul>
+              <div class="tabs__content">
+                <div class="tabs__panel">
+                  <ul class="list-reset cart-form__payment-list payment-list">
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">Оплата через систему быстрых платежей</span>
+                      </label>
+                    </li>
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">Банковская карта</span>
+                      </label>
+                    </li>
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">Яндекс.Деньги</span>
+                      </label>
+                    </li>
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">QIWI Wallet</span>
+                      </label>
+                    </li>
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">Сбербанк Онлайн</span>
+                      </label>
+                    </li>
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">При получении</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tabs__panel">
+                  <ul class="list-reset cart-form__payment-list payment-list">
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">Оплата через систему быстрых платежей</span>
+                      </label>
+                    </li>
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">Банковская карта</span>
+                      </label>
+                    </li>
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">Яндекс.Деньги</span>
+                      </label>
+                    </li>
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">QIWI Wallet</span>
+                      </label>
+                    </li>
+                    <li class="payment-list__item">
+                      <label class="order-radio payment__radio">
+                        <input type="radio" name="order-item" class="visually-hidden">
+                        <span class="payment-list__text">Сбербанк Онлайн</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="cart-form__payment">
               <label class="order-radio">
                 <input type="radio" name="order-payment" class="visually-hidden">
                 <span class="order-radio__text">Физическое лицо</span>
@@ -486,7 +673,7 @@
                   </label>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
           <div class="cart-form__item cart-form__item--order">
             <h3 class="cart-form__title">Ваш заказ</h3>
