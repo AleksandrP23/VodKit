@@ -525,9 +525,6 @@ a {
   .header-main .header-items__link:nth-child(2) {
     display: none;
   }
-  .header-main .header-items__link:nth-child(4) {
-    display: none;
-  }
 }
 .header-main .header-items__img {
   fill: var(--img-color);
@@ -538,8 +535,7 @@ a {
   padding: 0;
   position: relative;
 }
-
-input[type=text] {
+#wrap input[type=text] {
   height: 60px;
   font-size: 20px;
   display: inline-block;
@@ -558,15 +554,18 @@ input[type=text] {
   transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
   cursor: pointer;
 }
-
-input[type=text]:focus:hover {
+@media (max-width: 767px) {
+  #wrap input[type=text] {
+    height: 40px;
+  }
+}
+#wrap input[type=text]:focus:hover {
   border-bottom: 1px solid #fff;
   background: #F2F2FA;
   border: 3px solid var(--img-color);
   border-radius: 30px;
 }
-
-input[type=text]:focus {
+#wrap input[type=text]:focus {
   width: 400px;
   z-index: 1;
   border-bottom: 1px solid #fff;
@@ -577,14 +576,13 @@ input[type=text]:focus {
   border-radius: 30px;
 }
 @media (max-width: 767px) {
-  input[type=text]:focus {
+  #wrap input[type=text]:focus {
     width: 250px;
     right: -100px;
     top: 40px;
   }
 }
-
-input[type=submit] {
+#wrap input[type=submit] {
   height: 67px;
   width: 63px;
   display: inline-block;
@@ -601,9 +599,9 @@ input[type=submit] {
   background-color: transparent;
 }
 @media (max-width: 767px) {
-  input[type=submit] {
-    width: 45px;
-    height: 45px;
+  #wrap input[type=submit] {
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -3618,7 +3616,7 @@ input[type=submit] {
 }
 @media (max-width: 767px) {
   .menu {
-    margin-left: 10px;
+    margin-left: 25px;
   }
 }
 .dropdown {
@@ -3789,11 +3787,22 @@ input[type=submit] {
     top: 15px;
   }
 }
+@media (max-width: 576px) {
+  .dropdown__svg {
+    right: 15px;
+  }
+}
 .dropdown__svg svg {
   stroke: #313188;
   stroke-width: 3px;
   width: 37px;
   height: 37px;
+}
+@media (max-width: 576px) {
+  .dropdown__svg svg {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .products {
@@ -6837,16 +6846,16 @@ input[type=submit] {
   margin-bottom: 55px;
 }
 .cart-form__self .payment-list__text::before {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   top: 0;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
 }
 .cart-form__self .payment-list__text::after {
-  top: 6px;
-  left: 6px;
+  top: 0;
+  left: 0;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
@@ -7113,7 +7122,7 @@ input[type=submit] {
 }
 @media (max-width: 767px) {
   .payment-list__text::before {
-    top: 14%;
+    top: 10px;
   }
 }
 .payment-list__text::after {
@@ -7137,7 +7146,7 @@ input[type=submit] {
 }
 @media (max-width: 767px) {
   .payment-list__text::after {
-    top: 14%;
+    top: 10px;
   }
 }
 
@@ -7148,7 +7157,7 @@ input[type=submit] {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .payment-btns {
     margin-bottom: 30px;
   }
@@ -7182,4 +7191,3 @@ input[type=submit] {
   background: #F2F2FA;
   color: #000018;
 }
-/*# sourceMappingURL=main.css.map */
