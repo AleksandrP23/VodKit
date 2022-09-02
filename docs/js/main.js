@@ -298,7 +298,7 @@ burger === null || burger === void 0 ? void 0 : burger.addEventListener('click',
 /***/ (() => {
 
 if (document.querySelector('.order-radio__wrapper')) {
-  document.getElementById('self-btn').onclick = function () {
+  document.querySelector('.cart-form__tabs-item').onclick = function () {
     var disabled = document.getElementById("name").disabled;
     var disabled1 = document.getElementById("name1").disabled;
     var disabled2 = document.getElementById("name2").disabled;
@@ -314,33 +314,33 @@ if (document.querySelector('.order-radio__wrapper')) {
     ;
 
     if (disabled1) {
-      document.getElementById("name1").disabled = false;
+      document.getElementById("name1").disabled1 = false;
     } else {
-      document.getElementById("name1").disabled = true;
+      document.getElementById("name1").disabled1 = true;
     }
 
     ;
 
     if (disabled2) {
-      document.getElementById("name2").disabled = false;
+      document.getElementById("name2").disabled2 = false;
     } else {
-      document.getElementById("name2").disabled = true;
+      document.getElementById("name2").disabled2 = true;
     }
 
     ;
 
     if (disabled3) {
-      document.getElementById("name3").disabled = false;
+      document.getElementById("name3").disabled3 = false;
     } else {
-      document.getElementById("name3").disabled = true;
+      document.getElementById("name3").disabled3 = true;
     }
 
     ;
 
     if (disabled4) {
-      document.getElementById("name4").disabled = false;
+      document.getElementById("name4").disabled4 = false;
     } else {
-      document.getElementById("name4").disabled = true;
+      document.getElementById("name4").disabled4 = true;
     }
 
     ;
@@ -14515,4 +14515,3 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map
